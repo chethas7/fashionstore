@@ -18,7 +18,9 @@ app.set("port", port);
 
 mongoose.connect(process.env.MONGO_URI).then((response) => {
   console.log("dataBase connected");
-});
+}).catch((err)=>{
+  console.log(err)
+})
 
 /**
  * Create HTTP server.

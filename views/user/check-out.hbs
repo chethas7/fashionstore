@@ -56,7 +56,7 @@
                                                             <div>Number : {{this.Number}}</div>
 
                                                             <input type="radio" id="state" name="address"
-                                                                value="{{this._id}}" {{#if @first}} ch {{/if}} >
+                                                                value="{{this._id}}" {{#if @first}} ch {{/if}}>
 
                                                 </div>
                                                 {{/each}}
@@ -129,147 +129,12 @@
                                 </div>
                             </div>
                         </div>
-                    
-
-                            <div class="col-md-6 col-12 mb-5">
-                                <div class="col-md-12">
-                                    <h2 class="h3 mb-3 text-black">Your Order</h2>
-                                    <div class="p-3 p-lg-5 border">
-                                        <table class="table site-block-order-table mb-5">
-                                            <thead>
-                                                <th>Product</th>
-                                                <th>Total</th>
-                                            </thead>
-                                            <tbody>
-                                                {{#each productzdetails}}
-                                                {{#each this.cartdata}}
-                                                <tr>
-                                                    <td>{{this.productId.product_name}} <strong class="mx-2">x</strong>
-                                                        {{this.quantity}}</td>
-                                                    <td>₹ {{this.productId.product_price}}</td>
-                                                </tr>
-                                                {{/each}}
-                                                {{/each}}
-
-                                                {{!-- <tr>
-                                                    <td class="text-black font-weight-bold"><strong>Cart
-                                                            Subtotal</strong>
-                                                    </td>
-                                                    <td class="text-black">$350.00</td>
-                                                </tr> --}}
-                                                <tr>
-                                                    <td class="text-black font-weight-bold"><strong>Order Total</strong>
-                                                    </td>
-                                                    <td class="text-black font-weight-bold"><strong>
-                                                            <p id="total-prize">{{totalzamount}}</p>
-                                                        </strong></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-
-                                        <div class="border p-3 mb-3">
-                                            <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse"
-                                                    href="#collapsebank" role="button" aria-expanded="false"
-                                                    aria-controls="collapsebank">Cash On Delivery</a></h3>
 
 
-
-
-                                            <div class="collapse" id="collapsebank">
-                                                <div class="py-2">
-                                                    {{!-- <p class="mb-0">Make your payment directly into our bank
-                                                        account.
-                                                        Please
-                                                        use
-                                                        your Order ID as the payment reference. Your order won’t be
-                                                        shipped
-                                                        until the funds have cleared in our account.</p> --}}
-                                                    <input type="radio" name="payment" value="COD" id="COD">
-
-
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="border p-3 mb-3">
-                                            <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse"
-                                                    href="#collapsecheque" role="button" aria-expanded="false"
-                                                    aria-controls="collapsecheque">UPI</a></h3>
-
-                                            <div class="collapse" id="collapsecheque">
-                                                <div class="py-2">
-                                                    {{!-- <p class="mb-0">Make your payment directly into our bank
-                                                        account. Please
-                                                        use
-                                                        your Order ID as the payment reference. Your order won’t be
-                                                        shipped
-                                                        until the funds have cleared in our account.</p> --}}
-                                                    <input type="radio" name="payment" value="netbanking" name="payment"
-                                                        id="netbanking" checked>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="border p-3 mb-5">
-                                            <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse"
-                                                    href="#collapsepaypal" role="button" aria-expanded="false"
-                                                    aria-controls="collapsepaypal">Net Banking</a>
-                                            </h3>
-
-                                            <div class="collapse" id="collapsepaypal">
-                                                <div class="py-2">
-                                                    {{!-- <p class="mb-0">Make your payment directly into our bank
-                                                        account. Please
-                                                        use
-                                                        your Order ID as the payment reference. Your order won’t be
-                                                        shipped
-                                                        until the funds have cleared in our account.</p> --}}
-                                                    <input type="radio" name="payment" value="NetBanking">
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <button data-toggle="modal" data-target="#modal1"
-                                                class="btn btn-primary btn-lg py-3 btn-block">Place
-                                                Order</button>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                     </div>
-                        </div>
-                  
-            </div>
-            
-
-            {{!-- MODAL --}}
-              <div class="col-md-6 d-flex">
-            <div class="  container d-flex justify-content-center mt-100">
-
-                <!-- Button to Open the Modal -->
-                {{!-- <button type="button" class="btn openmodal" data-toggle="modal" data-target="#modal1">
-                    Click here
-                </button> --}}
-
-                <!-- The Modal -->
-                <div class="modal fade" id="modal1">
-                    <div class="modal-dialog modal-dialog-centered">
-                        <div class="modal-content">
-
-                            <!-- Modal Header -->
-                            <div class="modal-header">
-                                <h4 class="modal-title">CONFIRM YOUR ORDER</h4>
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            </div>
-
-                            <!-- Modal body -->
-                            <div class="modal-body">
-                                <div class="container">
-                                    <h6>Item Details</h6>
+                        <div class="col-md-6 col-12 mb-5">
+                            <div class="col-md-12">
+                                <h2 class="h3 mb-3 text-black">Your Order</h2>
+                                <div class="p-3 p-lg-5 border">
                                     <table class="table site-block-order-table mb-5">
                                         <thead>
                                             <th>Product</th>
@@ -296,335 +161,472 @@
                                                 <td class="text-black font-weight-bold"><strong>Order Total</strong>
                                                 </td>
                                                 <td class="text-black font-weight-bold"><strong>
-                                                        <p id="total-price">{{totalzamount}}</p>
+                                                        <p id="total-prize">{{totalzamount}}</p>
                                                     </strong></td>
                                             </tr>
                                         </tbody>
                                     </table>
-                                    {{!-- <h6>Order Details</h6>
-                                    <div class="row">
-                                        <div class="col-xs-6">
-                                            <ul type="none">
-                                                <li class="left">Order number:</li>
-                                                <li class="left">Date:</li>
-                                                <li class="left">Price:</li>
-                                                <li class="left">Shipping:</li>
-                                                <li class="left">Total Price:</li>
-                                            </ul>
+
+                                    <div class="border p-3 mb-3">
+                                        <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse"
+                                                href="#collapsebank" role="button" aria-expanded="false"
+                                                aria-controls="collapsebank">Cash On Delivery</a></h3>
+
+
+
+
+                                        <div class="collapse" id="collapsebank">
+                                            <div class="py-2">
+                                                {{!-- <p class="mb-0">Make your payment directly into our bank
+                                                    account.
+                                                    Please
+                                                    use
+                                                    your Order ID as the payment reference. Your order won’t be
+                                                    shipped
+                                                    until the funds have cleared in our account.</p> --}}
+                                                <input type="radio" name="payment" value="COD" id="COD">
+
+
+
+                                            </div>
                                         </div>
-                                        <div class="col-xs-6">
-                                            <ul class="right" type="none">
-                                                <li class="right">#BBRT-3456981</li>
-                                                <li class="right">19-03-2020</li>
-                                                <li class="right">$690</li>
-                                                <li class="right">$30</li>
-                                                <li class="right">$720</li>
-                                            </ul>
+                                    </div>
+
+                                    <div class="border p-3 mb-3">
+                                        <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse"
+                                                href="#collapsecheque" role="button" aria-expanded="false"
+                                                aria-controls="collapsecheque">UPI</a></h3>
+
+                                        <div class="collapse" id="collapsecheque">
+                                            <div class="py-2">
+                                                {{!-- <p class="mb-0">Make your payment directly into our bank
+                                                    account. Please
+                                                    use
+                                                    your Order ID as the payment reference. Your order won’t be
+                                                    shipped
+                                                    until the funds have cleared in our account.</p> --}}
+                                                <input type="radio" name="payment" value="netbanking" name="payment"
+                                                    id="netbanking">
+                                            </div>
                                         </div>
-                                    </div> --}}
-                                    {{!-- <h6>Shipment</h6>
-                                    <div class="row" style="border-bottom: none">
-                                        <div class="col-xs-6">
-                                            <ul type="none">
-                                                <li class="left">Estimated arrival</li>
-                                            </ul>
+                                    </div>
+
+                                    <div class="border p-3 mb-5">
+                                        <h3 class="h6 mb-0"><a class="d-block" data-toggle="collapse"
+                                                href="#collapsepaypal" role="button" aria-expanded="false"
+                                                aria-controls="collapsepaypal">Net Banking</a>
+                                        </h3>
+
+                                        <div class="collapse" id="collapsepaypal">
+                                            <div class="py-2">
+                                                {{!-- <p class="mb-0">Make your payment directly into our bank
+                                                    account. Please
+                                                    use
+                                                    your Order ID as the payment reference. Your order won’t be
+                                                    shipped
+                                                    until the funds have cleared in our account.</p> --}}
+                                                <input type="radio" name="payment" value="NetBanking">
+                                            </div>
                                         </div>
-                                        <div class="col-xs-6">
-                                            <ul type="none">
-                                                <li class="right">25-03-2020</li>
-                                            </ul>
-                                        </div>
-                                    </div> --}}
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button data-toggle="modal" data-target="#modal1"
+                                            class="btn btn-primary btn-lg py-3 btn-block">Place
+                                            Order</button>
+                                    </div>
+
                                 </div>
                             </div>
+                        </div>
 
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                                <button type="button" onclick="checkout()" class="btn">Place order</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+            {{!-- MODAL --}}
+            <div class="col-md-6 d-flex">
+                <div class="  container d-flex justify-content-center mt-100">
+
+                    <!-- Button to Open the Modal -->
+                    {{!-- <button type="button" class="btn openmodal" data-toggle="modal" data-target="#modal1">
+                        Click here
+                    </button> --}}
+
+                    <!-- The Modal -->
+                    <div class="modal fade" id="modal1">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h4 class="modal-title">CONFIRM YOUR ORDER</h4>
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                </div>
+
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                    <div class="container">
+                                        <h6>Item Details</h6>
+                                        <table class="table site-block-order-table mb-5">
+                                            <thead>
+                                                <th>Product</th>
+                                                <th>Total</th>
+                                            </thead>
+                                            <tbody>
+                                                {{#each productzdetails}}
+                                                {{#each this.cartdata}}
+                                                <tr>
+                                                    <td>{{this.productId.product_name}} <strong class="mx-2">x</strong>
+                                                        {{this.quantity}}</td>
+                                                    <td>₹ {{this.productId.product_price}}</td>
+                                                </tr>
+                                                {{/each}}
+                                                {{/each}}
+
+                                                {{!-- <tr>
+                                                    <td class="text-black font-weight-bold"><strong>Cart
+                                                            Subtotal</strong>
+                                                    </td>
+                                                    <td class="text-black">$350.00</td>
+                                                </tr> --}}
+                                                <tr>
+                                                    <td class="text-black font-weight-bold"><strong>Order Total</strong>
+                                                    </td>
+                                                    <td class="text-black font-weight-bold"><strong>
+                                                            <p id="total-price">{{totalzamount}}</p>
+                                                        </strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        {{!-- <h6>Order Details</h6>
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <ul type="none">
+                                                    <li class="left">Order number:</li>
+                                                    <li class="left">Date:</li>
+                                                    <li class="left">Price:</li>
+                                                    <li class="left">Shipping:</li>
+                                                    <li class="left">Total Price:</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <ul class="right" type="none">
+                                                    <li class="right">#BBRT-3456981</li>
+                                                    <li class="right">19-03-2020</li>
+                                                    <li class="right">$690</li>
+                                                    <li class="right">$30</li>
+                                                    <li class="right">$720</li>
+                                                </ul>
+                                            </div>
+                                        </div> --}}
+                                        {{!-- <h6>Shipment</h6>
+                                        <div class="row" style="border-bottom: none">
+                                            <div class="col-xs-6">
+                                                <ul type="none">
+                                                    <li class="left">Estimated arrival</li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <ul type="none">
+                                                    <li class="right">25-03-2020</li>
+                                                </ul>
+                                            </div>
+                                        </div> --}}
+                                    </div>
+                                </div>
+
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                    <button type="button" onclick="checkout()" class="btn">Place order</button>
+                                </div>
+
                             </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-              </div>
- </div>
-
-
-            {{!-- <footer class="site-footer border-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6 mb-5 mb-lg-0">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <h3 class="footer-heading mb-4">Navigations</h3>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <ul class="list-unstyled">
-                                        <li><a href="#">Sell online</a></li>
-                                        <li><a href="#">Features</a></li>
-                                        <li><a href="#">Shopping cart</a></li>
-                                        <li><a href="#">Store builder</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <ul class="list-unstyled">
-                                        <li><a href="#">Mobile commerce</a></li>
-                                        <li><a href="#">Dropshipping</a></li>
-                                        <li><a href="#">Website development</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col-md-6 col-lg-4">
-                                    <ul class="list-unstyled">
-                                        <li><a href="#">Point of sale</a></li>
-                                        <li><a href="#">Hardware</a></li>
-                                        <li><a href="#">Software</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
-                            <h3 class="footer-heading mb-4">Promo</h3>
-                            <a href="#" class="block-6">
-                                <img src="images/hero_1.jpg" alt="Image placeholder" class="img-fluid rounded mb-4">
-                                <h3 class="font-weight-light  mb-0">Finding Your Perfect Shoes</h3>
-                                <p>Promo from nuary 15 &mdash; 25, 2019</p>
-                            </a>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="block-5 mb-5">
-                                <h3 class="footer-heading mb-4">Contact Info</h3>
-                                <ul class="list-unstyled">
-                                    <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
-                                    <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
-                                    <li class="email">emailaddress@domain.com</li>
-                                </ul>
-                            </div>
-
-                            <div class="block-7">
-                                <form action="#" method="post">
-                                    <label for="email_subscribe" class="footer-heading">Subscribe</label>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control py-4" id="email_subscribe"
-                                            placeholder="Email">
-                                        <input type="submit" class="btn btn-sm btn-primary" value="Send">
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row pt-5 mt-5 text-center">
-                        <div class="col-md-12">
-                            <p>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;
-                                <script data-cfasync="false"
-                                    src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
-                                template is made with
-                                <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
-                                    target="_blank" class="text-primary">Colorlib</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
-                        </div>
-
-                    </div>
-                </div>
-            </footer> --}}
     </div>
 
 
-    <style>
-        * {
-            outline: none;
+    {{!-- <footer class="site-footer border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="footer-heading mb-4">Navigations</h3>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Sell online</a></li>
+                                <li><a href="#">Features</a></li>
+                                <li><a href="#">Shopping cart</a></li>
+                                <li><a href="#">Store builder</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Mobile commerce</a></li>
+                                <li><a href="#">Dropshipping</a></li>
+                                <li><a href="#">Website development</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Point of sale</a></li>
+                                <li><a href="#">Hardware</a></li>
+                                <li><a href="#">Software</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                    <h3 class="footer-heading mb-4">Promo</h3>
+                    <a href="#" class="block-6">
+                        <img src="images/hero_1.jpg" alt="Image placeholder" class="img-fluid rounded mb-4">
+                        <h3 class="font-weight-light  mb-0">Finding Your Perfect Shoes</h3>
+                        <p>Promo from nuary 15 &mdash; 25, 2019</p>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="block-5 mb-5">
+                        <h3 class="footer-heading mb-4">Contact Info</h3>
+                        <ul class="list-unstyled">
+                            <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
+                            <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
+                            <li class="email">emailaddress@domain.com</li>
+                        </ul>
+                    </div>
+
+                    <div class="block-7">
+                        <form action="#" method="post">
+                            <label for="email_subscribe" class="footer-heading">Subscribe</label>
+                            <div class="form-group">
+                                <input type="text" class="form-control py-4" id="email_subscribe" placeholder="Email">
+                                <input type="submit" class="btn btn-sm btn-primary" value="Send">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-5 mt-5 text-center">
+                <div class="col-md-12">
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script data-cfasync="false"
+                            src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This
+                        template is made with
+                        <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank"
+                            class="text-primary">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </footer> --}}
+</div>
+
+
+<style>
+    * {
+        outline: none;
+    }
+
+    @font-face {
+        font-family: Roboto;
+        src: url('https://res.cloudinary.com/dxfq3iotg/raw/upload/v1585021315/Roboto-Regular.ttf');
+    }
+
+
+
+    .mt-100 {
+        margin-top: 150px;
+    }
+
+    .modal-content {
+        border-radius: 0.7rem;
+    }
+
+    @media(width:1024px) {
+        .modal-dialog {
+            max-width: 700px;
         }
+    }
 
-        @font-face {
-            font-family: Roboto;
-            src: url('https://res.cloudinary.com/dxfq3iotg/raw/upload/v1585021315/Roboto-Regular.ttf');
+    .modal-title {
+        text-align: center;
+        font-size: 3vh;
+
+    }
+
+    h4 {
+        margin-left: auto;
+    }
+
+    .modal-header {
+        border-bottom: none;
+        text-align: center;
+        padding-bottom: 0;
+    }
+
+    h6 {
+
+        margin-top: 2vh;
+        margin-bottom: 0;
+        font-size: 2vh;
+    }
+
+    .modal-body {
+        padding: 2vh;
+    }
+
+    .modal-footer {
+        border-top: none;
+        justify-content: center;
+        padding-top: 0;
+    }
+
+    .row {
+
+        padding: 2vh 0 2vh 0;
+        justify-content: space-between;
+        flex-wrap: unset;
+        margin: 0;
+    }
+
+
+
+    ul li {
+        font-size: 2vh;
+
+        line-height: 4vh;
+    }
+
+    .left {
+        float: left;
+        font-weight: normal;
+
+    }
+
+    .right {
+        float: right;
+        text-align: right;
+    }
+
+    .col {
+        padding-left: 0;
+    }
+
+    .openmodal {
+        background-color: white;
+        color: black;
+        width: 30vw;
+
+    }
+
+    :-moz-any-link:focus {
+        outline: none;
+    }
+
+    button:active {
+        outline: none;
+    }
+
+    button:focus {
+        outline: none;
+    }
+
+    .btn:focus {
+        box-shadow: none;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0/axios.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+{{!-- APPLY COUPON --}}
+<script>
+
+
+    function coupenApply() {
+        var value = document.getElementById('coupen-apply').value;
+        console.log("ahah", value);
+        $.ajax({
+            url: '/checkCoupen',
+            method: 'post',
+            dataType: 'json',
+            data: { 'value': value },
+            success: function (response) {
+                if (response.msg == 'success') {
+                    console.log("coupen verified")
+                    alert('coupen verified Successfully')
+                    console.log("data", response.data)
+                    discount_value = response.data[0].DiscountPrice
+                    console.log(discount_value);
+
+                    total_prize = document.getElementById('total-prize').innerText
+                    total_price = document.getElementById('total-price').innerText
+                    //tp = total_prize.textContent;
+                    console.log("total prize", total_prize);
+                    tp = total_prize - discount_value
+                    modalTp = total_price - discount_value
+                    console.log("finally", tp);
+                    //total_prize.textContent = tp;
+                    document.getElementById('total-prize').innerHTML = tp
+                    document.getElementById('total-price').innerHTML = modalTp
+
+
+
+
+                    // $("#cart-card").load(location.href + " #cart-card-d");
+                    // $("#total").load(location.href + " #total");
+                } else if (response.msg == 'coupenExist') {
+                    alert('Coupen already used')
+                } else if (response.msg == 'coupennotfound') {
+                    console.log("coupen not found")
+                } else if (response.msg == 'COuponalreadyused') {
+                    alert('Coupon already applied')
+
+                }
+                else {
+                    console.log("coupen id is fake")
+                }
+            },
+        });
+
+
+    }
+</script>
+<script>
+    function checkout() {
+
+        total_prize = document.getElementById('total-prize').textContent
+        const paymentdetails = $('input[type="radio"][name="payment"]:checked').val();
+        const addressdetails = $('input[type="radio"][name="address"]:checked').val();
+        console.log(total_prize, paymentdetails, addressdetails, 'kskjskssssssss');
+        if (paymentdetails == undefined || addressdetails == undefined) {
+console.log('kkkaaaaaaaaaaaaaaaaaaaa')
         }
-
-
-
-        .mt-100 {
-            margin-top: 150px;
-        }
-
-        .modal-content {
-            border-radius: 0.7rem;
-        }
-
-        @media(width:1024px) {
-            .modal-dialog {
-                max-width: 700px;
-            }
-        }
-
-        .modal-title {
-            text-align: center;
-            font-size: 3vh;
-
-        }
-
-        h4 {
-            margin-left: auto;
-        }
-
-        .modal-header {
-            border-bottom: none;
-            text-align: center;
-            padding-bottom: 0;
-        }
-
-        h6 {
-
-            margin-top: 2vh;
-            margin-bottom: 0;
-            font-size: 2vh;
-        }
-
-        .modal-body {
-            padding: 2vh;
-        }
-
-        .modal-footer {
-            border-top: none;
-            justify-content: center;
-            padding-top: 0;
-        }
-
-        .row {
-
-            padding: 2vh 0 2vh 0;
-            justify-content: space-between;
-            flex-wrap: unset;
-            margin: 0;
-        }
-
-
-
-        ul li {
-            font-size: 2vh;
-
-            line-height: 4vh;
-        }
-
-        .left {
-            float: left;
-            font-weight: normal;
-
-        }
-
-        .right {
-            float: right;
-            text-align: right;
-        }
-
-        .col {
-            padding-left: 0;
-        }
-
-        .openmodal {
-            background-color: white;
-            color: black;
-            width: 30vw;
-
-        }
-
-        :-moz-any-link:focus {
-            outline: none;
-        }
-
-        button:active {
-            outline: none;
-        }
-
-        button:focus {
-            outline: none;
-        }
-
-        .btn:focus {
-            box-shadow: none;
-        }
-    </style>
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0/axios.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    {{!-- APPLY COUPON --}}
-    <script>
-
-
-        function coupenApply() {
-            var value = document.getElementById('coupen-apply').value;
-            console.log("ahah", value);
-            $.ajax({
-                url: '/checkCoupen',
-                method: 'post',
-                dataType: 'json',
-                data: { 'value': value },
-                success: function (response) {
-                    if (response.msg == 'success') {
-                        console.log("coupen verified")
-                        alert('coupen verified Successfully')
-                        console.log("data", response.data)
-                        discount_value = response.data[0].DiscountPrice
-                        console.log(discount_value);
-
-                        total_prize = document.getElementById('total-prize').innerText
-                        total_price = document.getElementById('total-price').innerText
-                        //tp = total_prize.textContent;
-                        console.log("total prize", total_prize);
-                        tp = total_prize - discount_value
-                        modalTp = total_price - discount_value
-                        console.log("finally", tp);
-                        //total_prize.textContent = tp;
-                        document.getElementById('total-prize').innerHTML = tp
-                        document.getElementById('total-price').innerHTML = modalTp
-
-
-
-
-                        // $("#cart-card").load(location.href + " #cart-card-d");
-                        // $("#total").load(location.href + " #total");
-                    } else if (response.msg == 'coupenExist') {
-                        alert('Coupen already used')
-                    } else if (response.msg == 'coupennotfound') {
-                        console.log("coupen not found")
-                    } else if (response.msg == 'COuponalreadyused') {
-                        alert('Coupon already applied')
-
-                    }
-                    else {
-                        console.log("coupen id is fake")
-                    }
-                },
-            });
-
-
-        }
-    </script>
-    <script>
-        function checkout() {
-
-            total_prize = document.getElementById('total-prize').textContent
-            const paymentdetails = $('input[type="radio"][name="payment"]:checked').val();
-            const addressdetails = $('input[type="radio"][name="address"]:checked').val();
-            console.log(total_prize, paymentdetails, addressdetails, 'kskjskssssssss');
-
+        else {
             $.ajax({
                 url: '/finalpayment',
                 method: 'post',
@@ -645,35 +647,36 @@
 
                 }
             })
-
         }
 
-        function razorpayment(order) {
-            var options = {
-                "key": "rzp_test_iAoiuCU45pkTHr", // Enter the Key ID generated from the Dashboard
-                "amount": order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-                "currency": "INR",
-                "name": "Fashion Store",
-                "description": "Test Transaction",
-                "image": "https://example.com/your_logo",
-                "order_id": order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-                "handler": function (response) {
-                 location.assign(`/order-placed`)
-                },
-                "prefill": {
-                    "name": "Gaurav Kumar",
-                    "email": "gaurav.kumar@example.com",
-                    "contact": "9999999999"
-                },
-                "notes": {
-                    "address": "Razorpay Corporate Office"
-                },
-                "theme": {
-                    "color": "#3399cc"
-                }
-            };
-            var rzp1 = new Razorpay(options);
-                rzp1.open();
-        }
+    }
 
-    </script>
+    function razorpayment(order) {
+        var options = {
+            "key": "rzp_test_iAoiuCU45pkTHr", // Enter the Key ID generated from the Dashboard
+            "amount": order.amount, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            "currency": "INR",
+            "name": "Fashion Store",
+            "description": "Test Transaction",
+            "image": "https://example.com/your_logo",
+            "order_id": order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+            "handler": function (response) {
+                location.assign(`/order-placed`)
+            },
+            "prefill": {
+                "name": "Gaurav Kumar",
+                "email": "gaurav.kumar@example.com",
+                "contact": "9999999999"
+            },
+            "notes": {
+                "address": "Razorpay Corporate Office"
+            },
+            "theme": {
+                "color": "#3399cc"
+            }
+        };
+        var rzp1 = new Razorpay(options);
+        rzp1.open();
+    }
+
+</script>

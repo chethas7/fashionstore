@@ -1,0 +1,76 @@
+<div class="container">
+    <form class="form-horizontal" action="/admin/add-banner" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <br>
+            <!-- Form Name -->
+            <legend class="text-light bg-dark">Add Banner Data</legend>
+            <br>
+            <!-- Text input-->
+            <div class="form-group">
+                {{!-- <label class="col-md-4 control-label" for="product_id">Product ID</label> --}}
+                <div class="col-md-4">
+                    {{!-- <input id="product_id" name="product_id" class="form-control input-md" required=""
+                        type="text">
+                    --}}
+                </div>
+            </div>
+
+            <br>
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="banner_name">Banner name</label>
+                <div class="col-md-4">
+                    <input id="banner_name" name="banner_name" class="form-control input-md" required="" type="text">
+
+                </div>
+            </div>
+
+            <br>
+
+
+
+
+
+            <br>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="banner_discription">Banner Description</label>
+                <div class="col-md-4">
+                    <input id="banner_discription" name="banner_discription" class="form-control input-md" required=""
+                        type="text">
+
+                </div>
+            </div>
+
+            <br>
+
+            <br>
+
+
+
+
+
+            <!-- upload image File Button -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="filebutton">Upload Product Image</label>
+                <div class="col-md-4">
+                    <input id="filebutton" name="banner_image" multiple class="input-file" type="file">
+                </div>
+            </div>
+           
+
+            <!-- Button -->
+            <div class="form-group">
+
+                <div class="col-md-4">
+                    <br>
+                    <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Add
+                        Bannner</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+</div>
+</body>

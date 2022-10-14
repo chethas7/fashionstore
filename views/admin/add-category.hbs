@@ -1,0 +1,47 @@
+<div class="container">
+    <form class="form-horizontal" action="/admin/addcategory" method="post">
+  <fieldset>
+  <br>
+  <!-- Form Name -->
+  <legend class="text-light bg-dark">Add CataGory Name</legend>
+  <br>
+
+  
+  <br>
+  <!-- Text input-->
+  <div class="form-group">
+    <label class="col-md-4 control-label" for="product_name">Enter Category Name</label>  
+    <div class="col-md-4">
+        <input
+      type="text"
+      id="form3Example4cdg"
+      required
+      name="categoryname"
+      class="form-control-lg form-control"
+      placeholder="Enter category name"
+    />
+    {{#if categoryexist}}
+
+    <p style="color: red ">Category already exist</p>
+
+  {{/if}}
+    </div>
+  </div>
+  
+  
+  
+  <!-- Button -->
+  <div class="form-group">
+    
+    <div class="col-md-4">
+      <br>
+      <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Add</button>
+    </div>
+    </div>
+  
+  </fieldset>
+  </form>
+  </div>
+  </body>
+  
+

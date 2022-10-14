@@ -1,0 +1,184 @@
+<br>
+<div class="container-fluid main">
+<div class="container">
+  <!-- Title -->
+  <div class="row d-flex justify-content-center">
+  <div class="col-lg-10 d-flex justify-content-between align-items-center py-3">
+    <h2 class="h5 mb-0"><a href="#" class="text-muted"></a> OrderID: {{orderdetails._id}}</h2>
+    <button onclick="printDiv('printArea')" class="btn btn-link p-0 me-3 d-none d-lg-block btn-icon-text"><i class="bi bi-download"></i> <span class="text">Invoice</span></button>
+  </div>
+  </div>
+
+  <!-- Main content -->
+  <div id="printArea" class="row d-flex justify-content-center">
+    <div class="col-lg-10">
+      <!-- Details -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="mb-3 d-flex justify-content-between">
+            <div>
+              <span class="me-3">{{orderdetails.date}}</span>
+              {{!-- <span class="me-3">#16123222</span> --}}
+              {{!-- <span class="me-3">Visa -1234</span> --}}
+              <span class="badge ml-2 rounded-pill ">{{orderdetails.orderStatus}}</span>
+            </div>
+          
+          </div>
+          <table class="table table-borderless">
+            <tbody>
+                 {{#each productzdetails}}
+                    {{#each this.cartdata}}
+              <tr>
+                <td>
+                  <div class="d-flex mb-2">
+                    {{!-- <div class="flex-shrink-0">
+                      <img src="/images/products/{{this.productId.image.[0]}}" alt="" width="50" class="img-fluid">
+                    </div> --}}
+                    <div class="flex-lg-grow-1 ms-3 ml-3 d-flex align-items-center">
+                      <h6 class="medium mb-0"><a  class="text-reset"><strong>{{this.productId.product_name}}</strong>-{{this.productId.product_discription}}</a></h6>
+                    
+                        {{!-- <img src="/product/{{this.productId.image}}" alt="ok" height="10rem" width="10em"> --}}
+                      {{!-- <img src="/product/{{this.productId.image}}" alt="Image placeholder"  width="10em" class=""> --}}
+               
+                      {{!-- <span class="small">Color: Black</span> --}}
+                    </div>
+                  </div>
+                </td>
+                <div class="d-flex">
+                <div class="d-flex justify-content-center align-items-center">
+                <td><strong>x{{this.quantity}}</strong></td>
+                {{!-- <td><span class="currenc">₹ </span>{{multiplyAmount this.items.sellingPrice this.quantity}}</td> --}}
+                </div>
+                </div>
+              </tr>
+              {{/each}}
+              {{/each}}
+              {{!-- <tr>
+                <td>
+                  <div class="d-flex mb-2">
+                    <div class="flex-shrink-0">
+                      <img src="https://via.placeholder.com/280x280/FF69B4/000000" alt="" width="35" class="img-fluid">
+                    </div>
+                    <div class="flex-lg-grow-1 ms-3">
+                      <h6 class="small mb-0"><a href="#" class="text-reset">Smartwatch IP68 Waterproof GPS and Bluetooth Support</a></h6>
+                      <span class="small">Color: White</span>
+                    </div>
+                  </div>
+                </td>
+                <td>1</td>
+                <td class="text-end">$79.99</td>
+              </tr> --}}
+            </tbody>
+            {{!-- <tfoot>
+              <tr>
+                <td colspan="2">Subtotal</td>
+                <td class="text-end"><span class="currenc">₹ </span>{{orderData.totalCost}}</td>
+              </tr>
+              <tr>
+                <td colspan="2">Shipping</td>
+                <td class="text-end text-success">FREE</td>
+              </tr>
+              {{!-- <tr>
+                <td colspan="2">Discount (Code: {{orderData.coupon}})</td>
+                <td class="text-danger text-end">- <span class="currenc">₹ </span>{{amountFormat orderData.discount}}</td>
+              </tr>
+              <tr class="fw-bold">
+                <td colspan="2">TOTAL</td>
+                <td class="text-end"><span class="currenc">₹ </span>{{amountFormat orderData.finalCost}}</td>
+              </tr> 
+              <tr class="">
+                <td colspan="2"></td>
+                {{#twoConditions orderData.paymentStatus "Confirmed" orderData.orderStatus "Delivered"}}
+                <td></td>
+                {{!-- <td><button class="btn btn-sm btn-outline-secondary" disabled>{{orderData.orderStatus}}</button></td> 
+                {{else}}
+                <td class="text-center"><a onclick = "cancelOrder('{{orderData._id}}')" class="text-white btn btn-danger btn-sm mt-2">Cancel Order</a></td></tr>
+                {{/twoConditions}}
+            </tfoot> --}}
+          </table>
+        </div>
+      </div>
+      <!-- Payment -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-6">
+              <h3 class="h6" style="text-decoration:underline ;">Payment Method</h3>
+              <p>{{orderdetails.paymentMethod}}<br>
+              Total: <span class="currenc">₹ </span>{{orderdetails.finalCost}}
+              {{!-- <span class="badge bg-success rounded-pill">PAID</span></p> --}}
+            </div>
+            <div class="col-lg-6">
+              <h3 class="h6" style="text-decoration:underline ;">Billing Address</h3>
+              <address>
+                <strong>{{orderdetails.address.Name}} {{orderdetails.address.LastName}}</strong><br>
+                {{orderdetails.address.Housename}}<br>
+                {{orderdetails.address.Address}}, {{orderdetails.address.Locality}}<br>
+                {{orderdetails.address.LandMark}}, {{orderdetails.address.State}}<br>
+                 <span title="Phone">PIN Code:</span>{{orderdetails.address.Pincode}}
+<br>
+                <span title="Phone">Phone:</span> +91 {{orderdetails.address.Number}}
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{!-- <div class="col-lg-4"> --}}
+      <!-- Customer Notes -->
+      {{!-- <div class="card mb-4"> --}}
+        {{!-- <div class="card-body d-flex justify-content-center">
+            <a href="/cancel-order" class="btn btn-danger btn-sm">Cancel Order</a> --}}
+          {{!-- <h3 class="h6">Customer Notes</h3> --}}
+          {{!-- <p>Sed enim, faucibus litora velit vestibulum habitasse. Cras lobortis cum sem aliquet mauris rutrum. Sollicitudin. Morbi, sem tellus vestibulum porttitor.</p> --}}
+        {{!-- </div> --}}
+      {{!-- </div> --}}
+      
+      {{!-- <div class="card mb-4"> --}}
+        <!-- Shipping information -->
+        
+        {{!-- <div class="card-body"> --}}
+          {{!-- <h3 class="h6">Shipping Information</h3>
+          <strong>FedEx</strong>
+          <span><a href="#" class="text-decoration-underline" target="_blank">FF1234567890</a> <i class="bi bi-box-arrow-up-right"></i> </span>
+          <hr> --}}
+          
+          {{!-- <h3 class="h6" style="text-decoration: underline;">Billing address</h3>
+          <address>
+            <strong>{{address.fullName}}</strong><br>
+            {{address.building}}<br>
+            {{address.area}}, {{address.district}}<br>
+            <span title="Phone">Phone:</span> +91 {{address.mobile}}
+          </address>
+        </div> --}}
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <script src="/javascripts/user-script.js"></script>
+  <script>
+    function printDiv(divName) {
+     var printContents = document.getElementById(divName).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+

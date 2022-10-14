@@ -1,0 +1,43 @@
+<div class="main--content">
+
+    <a type="button" class="btn btn-primary btn-sm" href="/add-address">Add Address</a>
+
+    <div class="site-section">
+
+        <form class="form-horizontal" action="/address" method="post">
+
+
+
+            <div class="row">
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <h2 class="h3 mb-3 text-black">Billing Details</h2>
+                    {{#each response}}
+                    <div class="p-3 p-lg-5 border">
+
+
+
+
+
+                        <span class="plan-type">{{this.Name}} {{this.LastName}}</span>
+                        <br>
+                        <div>{{this.Housename}}</div>
+                        <div>{{this.Address}}</div>
+                        <span class="plan-type">{{this.Locality}} , {{this.LandMark}}
+                            <span class="slash">
+                                <div>{{this.State}}</div>
+                                <div>{{this.Pincode}}</div>
+                                <div>Number : {{this.Number}}</div>
+                                <br>
+                                <a type="button" class="btn btn-primary btn-sm"
+                                    href="/updateaddress/{{this._id}}">Edit</a>
+                                <a type="button" class="btn btn-danger" href="/deleteaddress/{{this._id}}"
+                                    onclick="return confirm('are you sure do you want to delete this address?')">Delete</a>
+
+                    </div>
+                    {{/each}}
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>

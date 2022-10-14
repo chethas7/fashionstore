@@ -1,0 +1,123 @@
+<!-- Section: Design Block -->
+<section class="">
+  <!-- Jumbotron -->
+  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+    <div class="container">
+      <div class="row gx-lg-5 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <h1 class="my-5 display-3 fw-bold ls-tight">
+            The best Fashion <br />
+            <span class="text-primary">for your Life Style</span>
+          </h1>
+          <p style="color: hsl(217, 10%, 50.8%)">
+            "Fashion is not something that exists in dresses only. Fashion is in the sky, in the street. Fashion has to
+            do with ideas, the way we live, what is happening."
+
+          </p>
+          <p style="color: hsl(217, 10%, 50.8%)">
+
+            — Coco Chanel
+          </p>
+        </div>
+
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card">
+            <div class="card-body py-5 px-md-5">
+              <form style="width: 23rem;" action="/login" method="post" id="signin">
+
+                <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+                
+
+                <div class="form-outline mb-4">
+                  <input type="email" id="email" class="form-control form-control-lg" autocomplete="off" name="email" onkeyup="validateEmail()" /> 
+                  <span id="email-error" class="text-danger font-weight-bold"></span>
+                  <label class="form-label" for="form2Example18">Email address</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="password" id="password" class="form-control form-control-lg" autocomplete="off" onkeyup="validatePassword()" name="password" />
+                  <span id="pass-error" class="text-danger font-weight-bold"></span>
+                  <label class="form-label" for="form2Example28">Password</label>
+                </div>
+
+                <div class="pt-1 mb-4">
+                  <button onclick="return validateForm()" class="btn btn-info btn-lg btn-block" type="submit">Login</button>
+            
+                </div>
+
+                <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot
+                    password?</a></p>
+                <p>Don't have an account?
+                  <a href="/signup" class="link-info">Register here</a>
+                </p>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Jumbotron -->
+</section>
+<!-- Section: Design Block -->
+
+<style>
+  .error {
+    color: rgb(242, 9, 9);
+  }
+</style>
+
+
+
+
+
+<script>
+  var emailError = document.getElementById('email-error');
+  var passError = document.getElementById('pass-error');
+  var submitError = document.getElementById('submit-error');
+
+  function validateEmail() {
+    var email = document.getElementById('email').value;
+
+    if (email.length == 0) {
+      emailError.innerHTML = '**Email is required';
+      return false
+    }
+    if (email.indexOf('@') <= 0) {
+      emailError.innerHTML = '**Invalid email format';
+      return false
+    }
+    if ((email.charAt(email.length - 4) != '.') && (email.charAt(email.length - 3) != '.')) {
+      emailError.innerHTML = '**invalid email format ';
+      return false
+    }
+    emailError.innerHTML = '<i class="fa fa-check" aria-hidden="true" style="color:green;"></i>';
+    return true
+  }
+
+
+  function validatePassword() {
+    var pass = document.getElementById('password').value;
+
+    if (pass.length == 0) {
+      passError.innerHTML = '**Password is required';
+      return false
+    }
+    if (pass.length <= 3) {
+      passError.innerHTML = '**Invalid password format';
+      return false
+    }
+    passError.innerHTML = '<i class="fa fa-check" aria-hidden="true" style="color:green;"></i>';
+    return true
+  }
+
+  function validateForm() {
+    if (!validateEmail() || !validatePassword()) {
+      submitError.style.display = 'block'
+      submitError.innerHTML = 'Please fill the form';
+      setTimeout(function () { submitError.style.display = 'none' }, 2000)
+      return false;
+    }
+  }
+</script>

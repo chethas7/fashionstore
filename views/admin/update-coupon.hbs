@@ -1,0 +1,96 @@
+<div class="container">
+  <form class="form-horizontal" action="/admin/update-coupon/{{response._id}}" method="post"
+    >
+    <fieldset>
+      <br>
+      <!-- Form Name -->
+      <legend class="text-light bg-dark">Add Coupon Details</legend>
+      <br>
+      <!-- Text input-->
+      <div class="form-group">
+        {{!-- <label class="col-md-4 control-label" for="product_id">Product ID</label> --}}
+        <div class="col-md-4">
+          {{!-- <input id="product_id" name="product_id" class="form-control input-md" required="" type="text">
+          --}}
+        </div>
+      </div>
+
+      <br>
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="couponName">Coupon Name</label>
+        <div class="col-md-4">
+          <input id="couponName" name="couponName" class="form-control input-md" required="" type="text" value="{{response.CouponName}}">
+
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="couponCode">Coupon Code</label>
+        <div class="col-md-4">
+          <input id="couponCode" name="couponCode" class="form-control input-md" required="" type="text" value="{{response.CouponCode}}">
+
+        </div>
+      </div>
+
+    
+
+      <!-- Select Basic -->
+      {{!-- <div class="form-group">
+        <label class="col-md-4 control-label" for="product_category">Product Category</label>
+        <div class="col-md-4">
+          <select id="product_category" name="product_category" class="form-control" type="text">
+            {{#each category}}
+            <option value={{this._id}}>{{this.categoryname}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </div> --}}
+
+      <br>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="discountPrice">Coupon Discount</label>
+        <div class="col-md-4">
+          <input id="discountPrice" name="discountPrice" class="form-control input-md" required="" type="number" value="{{response.DiscountPrice}}">
+
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="couponLimit">Coupon Limit</label>
+        <div class="col-md-4">
+          <input id="couponLimit" name="couponLimit" class="form-control input-md" required=""
+            type="number" value="{{response.CouponLimit}}">
+
+        </div>
+      </div>
+
+      <br>
+
+
+
+
+
+
+
+      <!-- Button -->
+      <div class="form-group">
+
+        <div class="col-md-4">
+          <br>
+          <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Update Coupon</button>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+</div>
+</body>

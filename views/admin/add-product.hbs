@@ -1,0 +1,118 @@
+<div class="container">
+  <form class="form-horizontal" action="/admin/addproduct" method="post"
+    enctype="multipart/form-data">
+    <fieldset>
+      <br>
+      <!-- Form Name -->
+      <legend class="text-light bg-dark">Add Product Details</legend>
+      <br>
+      <!-- Text input-->
+      <div class="form-group">
+        {{!-- <label class="col-md-4 control-label" for="product_id">Product ID</label> --}}
+        <div class="col-md-4">
+          {{!-- <input id="product_id" name="product_id" class="form-control input-md" required="" type="text">
+          --}}
+        </div>
+      </div>
+
+      <br>
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="product_name">Product Name</label>
+        <div class="col-md-4">
+          <input id="product_name" name="product_name" class="form-control input-md" required="" type="text">
+
+        </div>
+      </div>
+
+      <br>
+        <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="product_name">Product Discription</label>
+        <div class="col-md-4">
+          <input id="product_name" name="product_discription" class="form-control input-md" required="" type="text">
+
+        </div>
+      </div>
+      <br>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="product_name_fr">Product Price</label>
+        <div class="col-md-4">
+          <input id="product_price" name="product_price" class="form-control input-md" required="" type="number">
+
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Select Basic -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="product_category">Product Category</label>
+        <div class="col-md-4">
+          <select id="product_category" name="product_category" class="form-control" type="text">
+            {{#each category}}
+            <option value={{this._id}}>{{this.categoryname}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="product_discount">Product Discount</label>
+        <div class="col-md-4">
+          <input id="product_discount" name="product_discount" class="form-control input-md" required="" type="number">
+
+        </div>
+      </div>
+
+      <br>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="stock_availability">Stock</label>
+        <div class="col-md-4">
+          <input id="stock_availability" name="stock_availability" class="form-control input-md" required=""
+            type="number">
+
+        </div>
+      </div>
+
+      <br>
+
+
+
+
+
+      <!-- upload image File Button -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="filebutton">Upload Product Image</label>
+        <div class="col-md-4">
+          <input id="filebutton" name="image" multiple class="input-file" type="file">
+        </div>
+      </div>
+      <!-- File Button -->
+      {{!-- <div class="form-group">
+        <label class="col-md-4 control-label" for="filebutton">auxiliary_images</label>
+        <div class="col-md-4">
+          <input id="filebutton" name="filebutton" class="input-file" type="file">
+        </div>
+      </div> --}}
+
+      <!-- Button -->
+      <div class="form-group">
+
+        <div class="col-md-4">
+          <br>
+          <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Add Product</button>
+        </div>
+      </div>
+
+    </fieldset>
+  </form>
+</div>
+</body>

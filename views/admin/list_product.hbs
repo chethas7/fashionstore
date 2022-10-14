@@ -1,0 +1,48 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Discription</th>
+      <th scope="col">Price</th>
+      <th scope="col">Discount</th>
+      <th scope="col">Category</th>
+      <th scope="col">Stock</th>
+      <th scope="col">image</th>
+      <th scope="col">Change Status</th>
+
+
+    </tr>
+  </thead>
+  {{#each productlist}}
+  <tbody>
+
+
+
+    <tr>
+
+      <td>{{this.product_name}}</td>
+       <td>{{this.product_discription}}</td>
+      <td>₹{{this.product_price}}</td>
+      <td>₹{{this.product_discount}}</td>
+      <td>{{this.product_category.categoryname}}</td>
+      <td>{{this.stock_availability}}</td>
+
+      <td><img src="/product/{{this.image.[0]}}" alt="" width="50em"></td>
+      <td>
+        <a class="btn btn-success" href="/admin/update-product/{{this._id}}">Edit
+
+        </a>
+
+        <a class="btn btn-danger" href="/show-product/{{this._id}}"
+          onclick="return confirm('Are you sure you want to delete {{this.product_name}} ?')">Delete
+
+          </ion-icon>
+        </a>
+      </td>
+
+
+
+    </tr>
+  </tbody>
+  {{/each}}
+</table>

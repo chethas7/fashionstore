@@ -1,0 +1,47 @@
+<div class="container">
+  <form class="form-horizontal" action="/admin/update-banner/{{response._id}}" method="post">
+  
+      
+      
+      <br>
+      <!-- Form Name -->
+      <legend class="text-light bg-dark">Update Banner Details</legend>
+      <br>
+      <br>
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="banner_name">Banner Name</label>
+        <div class="col-md-4">
+          <input type="text" id="form3Example4cdg" name="banner_name" class="form-control-lg form-control "
+            placeholder="" value="{{response.banner_name}}" />
+        </div>
+      </div>
+
+       <br>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="banner_discription">Banner Discription</label>
+        <div class="col-md-4">
+          <input id="form3Example4cdg" name="banner_discription" class="form-control input-md" required="" type="text"
+            value="{{response.banner_discription}}">
+
+        </div>
+      </div>
+
+      <br>
+      <!-- upload image File Button -->
+
+      
+      
+
+      <!-- Button -->
+      <div class="form-group">
+
+        <div class="col-md-4">
+          <br>
+          <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Update Product</button>
+        </div>
+      </div>
+  </form>
+</div> 

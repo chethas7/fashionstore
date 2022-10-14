@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:300,400,700"> 
+    <link rel="stylesheet" href="/fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/jquery-ui.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+
+
+    <link rel="stylesheet" href="/css/aos.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<body>
+{{#if user_header}}
+{{> user-header}}
+{{/if}}
+  <section class="main mr-2">
+        <div class="sidebar ">
+            <ul class="sidebar--items">
+                
+                   <li>
+                    <a class="users" href="/">
+                        <span class="icon icon-2 "><i class="ri-home-2-line"></i></span>
+                        <span class="sidebar--item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/userprofile" id="active--link" class="Dashboard">
+                        <span class="icon icon-1"><i class="ri-user-line"></i></span>
+                        <span class="sidebar--item">Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="users" href="/viewaddress">
+                        <span class="icon icon-2 "><i class="ri-home-smile-fill"></i></span>
+                        <span class="sidebar--item">Address</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/vieworders">
+                        <span class="icon icon-4"><i class=" ri-todo-line"></i></span>
+                        <span class="sidebar--item">Orders</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/logout">
+                        <span class="icon icon-8"><i class="ri-logout-box-r-line"></i></span>
+                        <span class="sidebar--item">Logout</span>
+                    </a>
+                </li>
+                {{!-- <li>
+                    <a class="users" href="/">
+                        <span class="icon icon-2 "><i class="ri-home-2-line"></i></span>
+                        <span class="sidebar--item">Home</span>
+                    </a>
+                </li> --}}
+            </ul>
+            {{!-- <ul class="sidebar--bottom-items">
+                <li>
+                    <a href="/logout">
+                        <span class="icon icon-8"><i class="ri-logout-box-r-line"></i></span>
+                        <span class="sidebar--item">Logout</span>
+                    </a>
+                </li>
+            </ul> --}}
+        </div>
+
+  {{{body}}}
+    </section>
+
+   <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/owl.carousel.min.js"></script>
+  <script src="/js/jquery.magnific-popup.min.js"></script>
+  <script src="/js/aos.js"></script>
+
+  <script src="/js/main.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"></script>
+
+    <link rel="stylesheet" href="/css/userprofile.css">
+
+
+</body>
+
+
+</html>

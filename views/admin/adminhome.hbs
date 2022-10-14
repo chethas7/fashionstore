@@ -1,0 +1,145 @@
+<main>
+    <div class="container-fluid px-4">
+        <h1 class="mt-4">Admin Dashboard</h1>
+
+        <div class="container-fluid pt-4 px-4">
+            <div class="row g-4">
+                <div class="col-sm-6 col-xl-3">
+                    <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                        <i class="fa fa-chart-line fa-3x text-primary"></i>
+                        <div class="ms-3">
+                            <p class="mb-2">Today Sale</p>
+                            <h6 class="mb-0">&#8377;{{todaysales}}</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                        <i class="fa fa-chart-bar fa-3x text-primary"></i>
+                        <div class="ms-3">
+                            <p class="mb-2">Total Sale</p>
+                            <h6 class="mb-0">&#8377;{{allorders.allsale}}</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                        <i class="fa-solid fa-cube fa-3x text-primary"></i>
+                        <div class="ms-3">
+                            <p class="mb-2">Total orders</p>
+                            <h6 class="mb-0">{{orderscount.ordercount}}</h6>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                        <i class="fa-solid fa-cube fa-3x text-primary"></i>
+                        <div class="ms-3">
+                            <p class="mb-2">Delivered </p>
+                            <h6 class="mb-0"> <span class="text-success">{{orderscount.deliveredorders}}</span></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid pt-4 px-4">
+            <div class="row g-4">
+                <div class="col-sm-6 col-xl-3">
+                    <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                        <i class="fa-solid fa-user fa-3x text-primary"></i>
+                        <div class="ms-3">
+                            <p class="mb-2">Users</p>
+                            <div>
+
+                                <h6 class="mb-0"><span
+                                        class="text-success font-weight-normal">Active&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>{{userinfo.activeusers}}
+                                </h6>
+                                <h6 class="mb-0"><span class="text-danger font-weight-normal">Blocked&nbsp;</span>
+                                    {{userinfo.blockedusers}}</h6>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                        <i class="fa-regular fa-money-bill-1 fa-3x text-primary "></i>
+                        <div class="ms-3">
+                            <p class="mb-2">Online payments</p>
+                            <h6 class="mb-0">{{orderscount.online}}</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                        <i class="fa-regular fa-money-bill-1 fa-3x text-primary "></i>
+
+                        <div class="ms-3">
+                            <p class="mb-2">Cash on Delivery</p>
+                            <h6 class="mb-0">{{orderscount.cod}}</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                    <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                        <i class="fa-solid fa-rectangle-xmark fa-3x text-primary"></i>
+                        <div class="ms-3">
+                            <p class="mb-2">Cancelled orders</p>
+                            <h6 class="mb-0"><span class="text-danger">{{orderscount.cancelledorders}}</span></h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <!-- Sale & Revenue End -->
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-chart-bar me-1"></i>
+                        Bar Chart Example
+                    </div>
+                    <div class="card-body"><canvas id="myChart" width="100%" height="40"></canvas></div>
+                </div>
+            </div>
+        </div>
+
+        {{!-- <canvas id="myChart" style="width:100%;max-width:600px"></canvas>  --}}
+
+
+
+    </div>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script>
+    var xValues = ["Cash On Delivery", "Online Payments"];
+    var yValues = [{{orderscount.cod}}, {{orderscount.online}}];
+    var barColors = [
+        "#b91d47",
+        "#00aba9",
+        "#2b5797",
+        "#e8c3b9",
+        "#1e7145"
+    ];
+
+    new Chart("myChart", {
+        type: "doughnut",
+        data: {
+            labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: "Payment Ratio"
+            }
+        }
+    });
+</script>

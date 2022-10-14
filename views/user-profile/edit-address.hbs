@@ -1,0 +1,95 @@
+<div class="main--content">
+
+    <div class="site-section">
+
+        <form class="form-horizontal" action="/updateaddress/{{response._id}}" method="post">
+
+
+
+            <div class="row">
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <h2 class="h3 mb-3 text-black">Update Address</h2>
+                    <div class="p-3 p-lg-5 border">
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label for="c_fname" class="text-black">First Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="c_fname" name="name" value="{{response.Name}}">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="c_lname" class="text-black">Last Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="c_lname" name="lastname" value="{{response.LastName}}">
+                            </div>
+                        </div>
+
+
+                             <div class="form-group row">
+                            <div class="col-md-12">
+                                <label for="c_companyname" class="text-black">House Name </label>
+                                <input type="text" class="form-control" id="c_companyname" name="housename" value="{{response.Housename}}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <label for="c_companyname" class="text-black">Locality </label>
+                                <input type="text" class="form-control" id="c_companyname" name="locality" value="{{response.Locality}}">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <label for="c_address" class="text-black">Address<span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="c_address" name="address" value="{{response.Address}}"
+                                    >
+                            </div>
+                        </div>
+
+                        {{!-- <div class="form-group">
+                            <input type="text" class="form-control"
+                                placeholder="Apartment, suite, unit etc. (optional)">
+                        </div> --}}
+
+                        <div class="form-group row">
+                            <div class="col-md-6">
+                                <label for="c_state_country" class="text-black">State<span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="c_state_country" name="state" value="{{response.State}}">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="c_postal_zip" class="text-black">Pincode<span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="c_postal_zip" name="pincode" value="{{response.Pincode}}">
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-5">
+                            <div class="col-md-6">
+                                <label for="c_email_address" class="text-black">Landmark<span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="c_email_address" name="landmark" value="{{response.LandMark}}">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="c_phone" class="text-black">Phone <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="c_phone" name="number" value="{{response.Number}}"
+                                    placeholder="Phone Number">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-md-4">
+                                <br>
+                                <button type="submit" id="singlebutton" name="singlebutton" class="btn btn-primary">Update
+                                    Address</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>

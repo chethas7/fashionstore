@@ -5,7 +5,6 @@ var instance = new Razorpay({
     key_secret: process.env.key_secret
 });
 
-
 module.exports = {
 
     generateRazorpay: (orderid, totalprice) => {

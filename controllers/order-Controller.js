@@ -103,7 +103,7 @@ module.exports = {
             console.log(userid);
             let orders = await orderModel.find({ userId: userid })
                 .populate({ path: 'products', populate: "productId" })
-                .populate('address').lean()
+                .populate('address').sort({'date': -1}).lean()
             res(orders)
 
         })
